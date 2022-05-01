@@ -1,0 +1,40 @@
+@import 'buttons.css';
+@import 'navigation.css';
+@import 'colors.css';
+@import 'heading.css';
+@import 'table.css';
+@import 'form.css';
+@import 'section.css';
+/*
+Button: references
+https://getcssscan.com/css-buttons-examples
+
+Tables:
+https://freefrontend.com/css-tables/
+
+Forms:
+https://freefrontend.com/css-forms/
+
+TABLES
+FORM
+FOOTER
+SECTION
+ */
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  /* padding: 3em; */
+  background-color:white;
+  font-family: 'Oswald', sans-serif;
+}
+
+
+hr {
+  margin: 2em 1em;
+}
+
+
+

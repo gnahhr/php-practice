@@ -1,0 +1,38 @@
+/* NAVIGATION*/
+
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #232323;
+    color: #ccc;
+  }
+  .logo {
+    letter-spacing: 3px;
+    margin: 0 auto 0 1em;
+  }
+  
+  header .nav {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    grid-gap: 2em;
+    margin-right: 1em;
+  }
+  header .nav li {
+    list-style: none;
+    margin: 0;
+  }
+  
+  .navlink {
+    list-style: none;
+    margin: 0 1em;
+  }
+  
+  .navlink a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1.2em;
+  }

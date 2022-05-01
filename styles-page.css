@@ -1,0 +1,14 @@
+.landing-page {
+  text-align: left;
+  font-size: 10px;
+  display: grid;
+}
+
+.background-colors div {
+  padding: 1em;
+}
+
+.section {
+  margin: 1em;
+}
+
