@@ -1,8 +1,8 @@
 <?php
 session_start();
-// if (!isset($_SESSION['clearanceLevel']) || $_SESSION['clearanceLevel'] !== "superadmin") {
-//   Header("Location: /index.php");
-// }
+if (!isset($_SESSION['clearanceLevel']) || $_SESSION['clearanceLevel'] !== "superadmin") {
+  Header("Location: /index.php");
+}
 ?>
 
 <!DOCTYPE html>

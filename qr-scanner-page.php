@@ -124,6 +124,11 @@ if(!isset($_SESSION['clearanceLevel']) || $_SESSION['clearanceLevel'] !== "super
 
     function actionSelect(text){
       document.getElementById('dropdown-val').innerText = text;
+      if(text === 'Time out'){
+        document.getElementById('location').disabled = true;
+      }else{
+        document.getElementById('location').disabled = false;
+      }
     }
 
     function submitForm(){
