@@ -1,0 +1,64 @@
+.dashboard-page {
+  padding: 2em;
+  min-height:90vh;
+}
+
+.dashboard-page .modal_body {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dashboard-page__button-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+}
+
+.dashboard-page__button-container button {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.dashboard-page .input-group {
+  margin: 1em 0;
+}
+
+.dashboard-page .input-group input {
+  height: 50px;
+  outline: none !important;
+}
+
+.dashboard-page .input-group input:focus {
+  outline-width: 0;
+  outline: none !important;
+}
+
+.dashboard-page .input-group-addon {
+  background: transparent;
+  border-right: 0;
+}
+
+.dashboard-page .login__form {
+  border-radius: 15px;
+  padding: 1em 3em;
+  max-width: 400px;
+  min-height: 400px;
+  margin: auto;
+}
+
+.dashboard-page .button-86 {
+  width: 90%;
+  margin: auto;
+  border-radius: 0px !important;
+}
+
+.export-button {
+  width:300px !important;
+  margin-left: auto;
+  margin-top: 2em;
+}

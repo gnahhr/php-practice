@@ -1,0 +1,10 @@
+ID,"First Name","Last Name",Email,Password,"Clearance level"
+1,super,admin,superadmin@test.com,superadmin,superadmin
+2,Employee1,1,Employee1@test.com,Employee1,Employee
+3,Employee,2,Employee2@test.com,Employee2,Employee
+4,Student,1,Student1@gmail.com,Student1,Student
+5,Student,2,Student1@gmail.com,Student2,Student
+6,Student,3,Student3@gmail.com,Student3,Student
+7,Visitor,1,Visitor1@gmail.com,Visitor1,Visitor
+8,Visitor,2,Visitor2@gmail.com,Visitor2,Visitor
+9,Visitor,3,Visitor3@gmail.com,Visitor3,Visitor

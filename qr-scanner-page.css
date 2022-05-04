@@ -1,0 +1,56 @@
+.qr-page {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 90vh;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 15em;
+}
+
+.qr-page__code-container {
+  width: 50%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.qr-page .input-group {
+  margin: 1em 0;
+}
+
+.qr-page .input-group input {
+  height: 50px;
+  outline: none !important;
+}
+
+.qr-page .input-group input:focus {
+  outline-width: 0;
+  outline: none !important;
+}
+
+.qr-page .input-group-addon {
+  background: transparent;
+  border-right: 0;
+}
+
+.qr-page .login__form {
+  border: 2px solid #9c2a66;
+  border-radius: 15px;
+  padding: 1em 3em;
+  max-width: 400px;
+  min-height: 400px;
+  padding-bottom: 4em;
+}
+
+.qr-page .button-86 {
+  width: 90%;
+  margin: auto;
+  border-radius: 0px !important;
+}
