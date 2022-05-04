@@ -14,7 +14,7 @@
 
     if($user){
         $_SESSION['email'] = "Email already taken.";
-        Header("Location: ../../index.php");
+        Header("Location: ../../register.php");
     }
 
     // Prepare Query
@@ -36,5 +36,5 @@
         ':clearanceLevel' => $_POST['clearanceLevel']
     ]);
 
-    Header("Location: ../../audit-page.php");
+    Header("Location: ../../dashboard-page.php");
 ?>

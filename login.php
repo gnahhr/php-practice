@@ -74,7 +74,7 @@
         </div>
 
         <div class="links">
-          <button class="button-49" role="button">CSS Days 2022</button>
+          <button class="button-49" role="button">CCS Days 2022</button>
           <p class="copyright"><small class="text-white-50">© 2022. All Rights Reserved.</small></p>
         </div>
       </div>

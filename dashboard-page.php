@@ -42,8 +42,8 @@ require_once('./management/account/getAll.php');
           <li><a href="./dashboard-page.php">Dashboard</a></li>
           <li><a href="./audit-page.php">Audit</a></li>
           <li><a href="register.php"> Add User</a></li>
-          <li><a href="./qr-page.php">QR Code</a></li>
           <li><a href="./qr-scanner-page.php">QR Code Scanner</a></li>
+          <li><a href="./qr-page.php">QR Code</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#"><?php echo $_SESSION['name'] ?></a></li>
@@ -155,7 +155,7 @@ require_once('./management/account/getAll.php');
           <p class="pr-5 text-white-50">"Your talent is God's gift to you. What you do with it is your gift back to God." </p>
         </div>
         <div class="links">
-          <button class="button-49" role="button">CSS Days 2022</button>
+          <button class="button-49" role="button">CCS Days 2022</button>
           <p class="copyright"><small class="text-white-50">© 2022. All Rights Reserved.</small></p>
         </div>
       </div>

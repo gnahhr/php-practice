@@ -42,8 +42,8 @@ if(!isset($_SESSION['clearanceLevel']) || $_SESSION['clearanceLevel'] !== "super
           <li><a href="./dashboard-page.php">Dashboard</a></li>
           <li><a href="./audit-page.php">Audit</a></li>
           <li><a href="register.php"> Add User</a></li>
-          <li><a href="./qr-page.php">QR Code</a></li>
           <li><a href="./qr-scanner-page.php">QR Code Scanner</a></li>
+          <li><a href="./qr-page.php">QR Code</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#"><?php echo $_SESSION['name'] ?></a></li>
@@ -57,9 +57,11 @@ if(!isset($_SESSION['clearanceLevel']) || $_SESSION['clearanceLevel'] !== "super
       <thead>
         <tr>
           <th>ID</th>
+          <th>User ID</th>
           <th>Name</th>
           <th>Date</th>
           <th>Time In</th>
+          <th>Time Out</th>
           <th>Office</th>
         </tr>
       </thead>
@@ -67,9 +69,11 @@ if(!isset($_SESSION['clearanceLevel']) || $_SESSION['clearanceLevel'] !== "super
         <?php foreach ($audits as $audit) : ?>
           <tr>
             <td><?php echo $audit['id'] ?></td>
+            <td><?php echo $audit['userid'] ?></td>
             <td><?php echo $audit['name'] ?></td>
             <td><?php echo $audit['date'] ?></td>
             <td><?php echo $audit['timeIn'] ?></td>
+            <td><?php echo $audit['timeOut'] ?></td>
             <td><?php echo $audit['office'] ?></td>
           </tr>
         <?php endforeach; ?>
@@ -77,9 +81,11 @@ if(!isset($_SESSION['clearanceLevel']) || $_SESSION['clearanceLevel'] !== "super
       <tfoot>
         <tr>
           <th>ID</th>
+          <th>User ID</th>
           <th>Name</th>
           <th>Date</th>
           <th>Time In</th>
+          <th>Time Out</th>
           <th>Office</th>
         </tr>
       </tfoot>
@@ -99,7 +105,7 @@ if(!isset($_SESSION['clearanceLevel']) || $_SESSION['clearanceLevel'] !== "super
         </div>
 
         <div class="links">
-          <button class="button-49" role="button">CSS Days 2022</button>
+          <button class="button-49" role="button">CCS Days 2022</button>
           <p class="copyright"><small class="text-white-50">© 2022. All Rights Reserved.</small></p>
         </div>
       </div>

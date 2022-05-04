@@ -10,13 +10,14 @@
     
     if (!$user){
         $_SESSION['message'] = "User not found";
-        // Header("Location: ../../qr-scanner-page.php");
-        // exit;
+        Header("Location: ../../qr-scanner-page.php");
+        exit;
     }
 
     if($_GET['action'] === "Time in"){
         // Prepare Query
-        $query = "INSERT INTO audit(name, date, timeIn, office) VALUES (
+        $query = "INSERT INTO audit(userid, name, date, timeIn, office) VALUES (
+            :id,
             :name,
             :date,
             :timeIn,
@@ -25,6 +26,7 @@
         $statement = $pdo -> prepare($query);
 
         $statement -> execute([
+            ':id' => $_GET['id'],
             ':name' => $user['firstName']." ".$user['lastName'],
             ':date' => date("Y-m-d"),
             ':timeIn' => date("h:i:sa"),
@@ -32,21 +34,31 @@
         ]);
     } else if ($_GET['action'] === "Time out") {
         // Prepare Query
+        $query = "SELECT * FROM audit WHERE userid = :id ORDER BY id DESC";
+        $statement = $pdo -> prepare($query);
+        $statement -> execute([
+            ':id' => $_GET['id'],
+        ]);
+        $latest = $statement -> fetch(0);
+
         $query = "UPDATE audit SET
             timeOut = :timeOut
             WHERE
-            id = :id AND timeOut = NULL
-        )";
+            userid = :id
+            AND
+            timeIn = :timeIn
+        ";
 
         $statement = $pdo -> prepare($query);
 
         $statement -> execute([
             ':timeOut' => date("h:i:sa"),
-            ':id' => $_GET['id']
+            ':id' => $_GET['id'],
+            ':timeIn' => $latest['timeIn']
         ]);
     }
 
     
 
-    // Header("Location: ../../qr-scanner-page.php");
+    Header("Location: ../../qr-scanner-page.php");
 ?>

@@ -52,7 +52,6 @@ if(!isset($_SESSION['clearanceLevel']) || $_SESSION['clearanceLevel'] !== "super
   </nav>
   <div class="qr-page">
     <div class="qr-page_code-container">
-      <form action="submitForm()" method="get">
       <h3>Please input data</h3>
         <!-- Single button -->
 <div class="btn-group">
@@ -76,8 +75,7 @@ if(!isset($_SESSION['clearanceLevel']) || $_SESSION['clearanceLevel'] !== "super
           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
           <input id="id" type="text" class="form-control" name="id" placeholder="ID Number"> 
         </div>
-        <br><input type="submit" value="Submit" class="btn btn-success btn-block">
-      </form>
+        <br><input id="formSubmit"value="Submit" class="btn btn-success btn-block" onclick="submitForm()">
       <h2>QR Code Scanner</h2>
       <p>Please place your QR Code inside </p>
       <div style="width: 500px" id="reader"></div>
@@ -96,7 +94,7 @@ if(!isset($_SESSION['clearanceLevel']) || $_SESSION['clearanceLevel'] !== "super
 
         <div class="links">
 
-          <button class="button-49" role="button">CSS Days 2022</button>
+          <button class="button-49" role="button">CCS Days 2022</button>
 
           <p class="copyright"><small class="text-white-50">© 2022. All Rights Reserved.</small></p>
 
@@ -129,10 +127,11 @@ if(!isset($_SESSION['clearanceLevel']) || $_SESSION['clearanceLevel'] !== "super
     }
 
     function submitForm(){
-      const id = document.getElementById('id').innerText;
-      const location = document.getElementById('location').innerText;
+      const id = document.getElementById('id').value;
+      const location = document.getElementById('location').value;
       const action = document.getElementById('dropdown-val').innerText;
-      window.location.replace(`./management/account/scan.php?id=${decodedText}&location=${location}&action=${action}`);
+      console.log(id,location,action);
+      window.location.replace(`./management/account/scan.php?id=${id}&location=${location}&action=${action}`);
     }
   </script>
 </body>

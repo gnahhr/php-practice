@@ -36,8 +36,8 @@ session_start();
           <li><a href="./dashboard-page.php">Dashboard</a></li>
           <li><a href="./audit-page.php">Audit</a></li>
           <li><a href="register.php"> Add User</a></li>
-          <li><a href="./qr-page.php">QR Code</a></li>
           <li><a href="./qr-scanner-page.php">QR Code Scanner</a></li>
+          <li><a href="./qr-page.php">QR Code</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#"><?php echo $_SESSION['name'] ?></a></li>
@@ -70,7 +70,7 @@ session_start();
           <input id="lastName" type="lastName" class="form-control" name="lastName" placeholder="Last Name">
         </div>
         <div class="input-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
           <input style="display:none;" id="clearanceLevel" type="text" class="form-control" name="clearanceLevel" placeholder="Clearance Level">
           <div class="btn-group" style="width:100%">
             <button style="width:100%;height:50px;text-align:left;" type="button" id="dropdown-val" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -99,7 +99,7 @@ session_start();
           <p class="pr-5 text-white-50">"Your talent is God's gift to you. What you do with it is your gift back to God." </p>
         </div>
         <div class="links">
-          <button class="button-49" role="button">CSS Days 2022</button>
+          <button class="button-49" role="button">CCS Days 2022</button>
           <p class="copyright"><small class="text-white-50">© 2022. All Rights Reserved.</small></p>
         </div>
       </div>
